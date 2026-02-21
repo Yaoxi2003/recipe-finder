@@ -107,7 +107,7 @@ export default function IngredientList() {
                   >
                 <div className='flex items-center gap-4'>
                   <img src={tableList} alt="" />
-                  {isLoading ? 'Loading' : ' Get a recipe'}
+                  {isLoading ? 'Loading..' : ' Get a recipe'}
                 </div>
               </button>
 
