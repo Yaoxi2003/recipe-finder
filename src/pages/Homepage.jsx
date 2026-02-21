@@ -41,7 +41,7 @@ export default function Homepage() {
         viewport={{ once: true, amount: 0.3 }}
         variants={item}
       >
-        <AIchef />
+        <HomeAIChef />
       </motion.section>
 
       <motion.section 
@@ -56,3 +56,4 @@ export default function Homepage() {
   )
 
 }
+
