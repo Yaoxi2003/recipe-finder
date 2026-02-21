@@ -212,6 +212,8 @@ createServer({
     },
 
     routes() {
+        this.passthrough("/.netlify/functions/**")
+    
         this.namespace = "api"
         this.logging = false
 
@@ -224,7 +226,6 @@ createServer({
             return schema.recipes.find(id)
         })
         
-         this.passthrough("/.netlify/functions/**")
     }
 
 })

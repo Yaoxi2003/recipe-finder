@@ -1,4 +1,4 @@
-import Anthropic from "@anthropic-ai/sdk";
+import {Anthropic} from "@anthropic-ai/sdk";
 
 const SYSTEM_PROMPT = `
 You are an assistant that suggests recipes based on a user's ingredients. 
