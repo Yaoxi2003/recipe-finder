@@ -10,6 +10,7 @@ Strict Formatting Rules:
 `;
 
 export const handler = async (event) => {
+  console.log("API Key detected:", !!process.env.ANTHROPIC_API_KEY);
   // Only allow POST requests
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
@@ -20,7 +21,7 @@ export const handler = async (event) => {
     const ingredientsString = ingredients.join(", ");
 
     const anthropic = new Anthropic({
-      apiKey: process.env.ANTHROPIC_API_KEY, // Safely accessed on Netlify's server
+      apiKey: process.env.ANTHROPIC_API_KEY, 
     });
 
     const msg = await anthropic.messages.create({
