@@ -1,4 +1,4 @@
-const Anthropic = require("@anthropic-ai/sdk");
+import Anthropic from "@anthropic-ai/sdk";
 
 const SYSTEM_PROMPT = `
 You are an assistant that suggests recipes based on a user's ingredients. 
@@ -9,7 +9,7 @@ Strict Formatting Rules:
 4. Use Markdown lists.
 `;
 
-exports.handler = async (event) => {
+export const handler = async (event) => {
   // Only allow POST requests
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
@@ -42,4 +42,5 @@ exports.handler = async (event) => {
       body: JSON.stringify({ error: error.message }),
     };
   }
+
 };
