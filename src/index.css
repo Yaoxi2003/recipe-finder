@@ -1,0 +1,84 @@
+/* Font go here */
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* color */
+  --color-black: #000000;
+  /* font */
+  --font-primary: "Alata", sans-serif;
+  --font-secondary: "Nunito", sans-serif;
+  /* text size */
+  --text-t1-desktop: 72px;
+  --text-t1-mobile: 52px;
+  --text-t2-desktop: 48px;
+  --text-t2-mobile: 40px;
+  --text-t3-desktop: 32px;
+  --text-t3-mobile: 26px;
+  --text-t4-desktop: 20px;
+  --text-t4-mobile: 16px;
+  --text-t5: 14px;
+}
+
+/* ======= Typography ======= */
+@layer base {
+  h1 { @apply text-t1-mobile md:text-t1-desktop font-secondary font-bold text-white leading-[1.1]; }
+  h2 { @apply text-t2-mobile md:text-t2-desktop font-secondary font-bold text-slate-900; }
+  h3 { @apply text-t3-mobile md:text-t3-desktop font-secondary font-bold text-slate-900; }
+  h4 { @apply text-t5 font-primary text-slate-900; }
+  body { @apply font-primary text-t4-mobile md:text-t4-desktop text-slate-700 bg-slate-100; }
+  button { @apply cursor-pointer}
+}
+
+/* ======= General Layout ======= */
+@layer utilities {
+  .container-pro { @apply max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16; }
+
+  .pd-xs {@apply py-10; }
+  .pd-sm { @apply py-20; }
+  .pd-md { @apply py-40; }
+  .pd-lg { @apply py-60; }
+  .pd-xl { @apply py-80; }
+
+
+  .link-style {
+    @apply text-white font-bold hover:opacity-60 transition-opacity duration-300;
+  }
+  .footer-style {
+    @apply text-slate-200 font-normal hover:opacity-60 transition-opacity duration-300;
+  }
+
+  .list-style > li {
+    @apply pl-8 mb-3 relative;
+  }
+  .ul-style > li::before {
+    content: '';
+    @apply w-4 h-4 rounded-full bg-rose-800;
+    @apply absolute left-0 top-1/2 -translate-y-1/2;
+  }
+
+  .ol-style {
+   counter-reset: item;
+  }
+  .ol-style > li {
+    /* Increments the counter for every <li> */
+    counter-increment: item;
+  }
+  .ol-style > li::before {
+    content: counter(item);
+    @apply absolute left-0 top-0;
+    @apply font-bold text-rose-800;
+  }
+
+  /* button */
+  .primary-btn {
+    @apply focus:outline-2 outline-offset-2 transition-colors duration-300 
+            px-7 py-3 rounded-md cursor-pointer font-bold text-t4-desktop
+            flex justify-center items-center
+            bg-rose-700 text-white hover:bg-rose-300 hover:text-white focus:outline-rose-700;
+  }
+  .recipe-btn {
+    @apply rounded-full font-normal py-2
+  }
+} 
+
