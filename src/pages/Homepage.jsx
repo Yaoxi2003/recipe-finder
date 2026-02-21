@@ -1,6 +1,6 @@
 import Hero from '../component/Hero'
 import Benefit from '../component/Benefit'
-import AIchef from '../component/HomeAIchef'
+import HomeAIChef from "../components/HomeAIChef"
 import Feature from '../component/HomeFeature'
 import { motion } from 'framer-motion'
 
@@ -54,4 +54,5 @@ export default function Homepage() {
       </motion.section>
     </main>
   )
+
 }
