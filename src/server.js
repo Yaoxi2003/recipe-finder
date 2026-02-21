@@ -223,5 +223,8 @@ createServer({
             let id = request.params.id
             return schema.recipes.find(id)
         })
+        
+         this.passthrough("/.netlify/functions/**")
     }
+
 })
