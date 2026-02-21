@@ -1,4 +1,4 @@
-import RecipeCard from "./cards/recipeCard"
+import RecipeCard from "./cards/RecipeCard"
 
 export default function CardGrid({recipes}) {
   
@@ -16,3 +16,4 @@ export default function CardGrid({recipes}) {
     </div>
   )
 }
+
