@@ -1,4 +1,4 @@
-import RecipeCard from "./cards/recipeCard"
+import RecipeCard from "./cards/RecipeCard"
 
 export default function MoreRecipes({recipes, paramsId}) {
 
@@ -24,3 +24,4 @@ export default function MoreRecipes({recipes, paramsId}) {
     </div>
   )
 }
+
