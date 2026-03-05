@@ -1,7 +1,8 @@
-Ingreedy - Recipe Finder
+# Ingreedy - Recipe Finder
+
 Ingreedy is a responsive, modern web application designed to help users discover and filter recipes with ease. Built with React and styled with Tailwind CSS, it features a robust filtering system, intelligent search, and a smooth, animated user interface.
 
-🚀 Features
+## Features
 Smart Filtering System: Multi-criteria filtering for Maximum Prep Time and Maximum Cook Time using custom-styled radio dropdowns.
 
 Real-time Search: Instantly search for recipes by name or ingredients as you type.
